@@ -5,7 +5,6 @@ def multiple_returns(sentence):
 
     if not sentence:
         return ((length, None))
-    else:
-        return ((length, first))
+    return ((length, first))
 
 # double () because its returning a tuple
