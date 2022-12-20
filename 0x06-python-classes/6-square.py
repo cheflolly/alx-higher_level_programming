@@ -57,27 +57,27 @@ class Square:
             print(" " * self.__position[0], end="")
             print("#" * self.__size)
 
-        @property
-        def position(self):
-            """
-            position setter. Set the position of square
-            """
-            return self.__position
+    @property
+    def position(self):
+        """
+        position setter. Set the position of square
+        """
+        return self.__position
 
-        @position.setter
-        def position(self, value):
-            """
-            Handle position with errors
-            """
-            if type(value) != tuple:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            elif len(value) != 2:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            elif isinstance(value[0], int) is False:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            elif isinstance(value[1], int) is False:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            elif value[0] < 0 or value[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            else:
-                self.__position = value
+    @position.setter
+    def position(self, value):
+        """
+        Handle position with errors
+        """
+        if type(value) != tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif isinstance(value[0], int) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif isinstance(value[1], int) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
